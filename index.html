@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tairone Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      /* NAV */
+
+      .topnav {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+      }
+
+      .topnav a {
+        text-decoration: none;
+        color: black;
+        padding: 25px 0;
+      }
+
+      .topnav a:hover {
+        font-weight: bold;
+      }
+
+      /* HOME */
+
+      .home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 600px;
+        background: #f7f7f7;
+        text-align: center;
+      }
+
+      .minhafoto {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .home h1 {
+        margin-top: 20px;
+      }
+
+      .home p {
+        margin-top: 10px;
+        color: gray;
+      }
+
+      /* ABOUT */
+
+      .about {
+        padding: 40px 60px;
+        min-height: 600px;
+      }
+
+      .about h2 {
+        margin-bottom: 10px;
+      }
+
+      .about p {
+        color: gray;
+        margin: 20px 0;
+        line-height: 30px;
+      }
+
+      .about hr {
+        border: none;
+        height: 1px;
+        background: #ddd;
+      }
+
+      .about-list {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 10px;
+        margin: 20px 0;
+        line-height: 30px;
+      }
+
+      .about-list dt {
+        font-weight: bold;
+      }
+
+      .about-list dd {
+        margin: 0;
+      }
+
+      .cv-link {
+        text-decoration: none;
+        color: white;
+        background: black;
+        padding: 14px 30px;
+        display: inline-block;
+      }
+
+      /* SKILLS */
+
+      .skills-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        /* min-height: 600px; */
+        padding: 40px 60px;
+        background: #f8f8f8;
+      }
+
+      .skill-progress {
+        margin-top: 25px;
+      }
+
+      .skill-title {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+      }
+
+      .bar-progress {
+        height: 4px;
+        width: 100%;
+        background: #e1e1e1;
+      }
+
+      .bar-progress-status {
+        height: 100%;
+        width: 50%;
+        background: black;
+      }
+
+      /* CONTACT */
+
+      .contact-container {
+        padding: 40px 60px;
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+      }
+
+      .contact-form label {
+        margin-top: 15px;
+        margin-bottom: 5px;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        padding: 12px;
+        border: 1px solid #ddd;
+        font-size: 14px;
+      }
+
+      .contact-form button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        background: black;
+        color: white;
+        cursor: pointer;
+        width: fit-content;
+        align-self: end;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="content">
+      <header class="topnav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </header>
+
+      <section class="home">
+        <img src="./me.jpg" alt="Foto de Tairone" class="minhafoto" />
+
+        <h1>Tairone</h1>
+
+        <p>I’m a Software Engineer here to turn your ideas into results.</p>
+      </section>
+
+      <section class="about">
+        <h2>About me</h2>
+
+        <p>Software Engineer</p>
+
+        <hr />
+
+        <p>
+          Meu nome é Tairone e estou em formação para me tornar Engenheiro de Software. Tenho dedicado grande parte do meu tempo ao estudo de desenvolvimento, arquitetura de sistemas e boas práticas
+          de programação.
+        </p>
+
+        <p>
+          Com conhecimento em desenvolvimento, automações e integrações, busco criar soluções que não apenas funcionem, mas que sejam estáveis, sustentáveis e de fácil manutenção. Meu foco é construir
+          sistemas que resistam ao tempo, com eficiência e responsabilidade técnica.
+        </p>
+
+        <hr />
+
+        <dl class="about-list">
+          <dt>Aniversário:</dt>
+          <dd>15.11.1993</dd>
+
+          <dt>Idade:</dt>
+          <dd>32</dd>
+
+          <dt>Email:</dt>
+          <dd>tairone.escobar@gmail.com</dd>
+        </dl>
+
+        <a href="#" class="cv-link">Download CV</a>
+      </section>
+
+      <section class="skills-container">
+        <div class="programming-skills">
+          <h2>Programming Skills</h2>
+
+          <div class="skill-progress">
+            <div class="skill-title">
+              <p>HTML & CSS</p>
+              <p>50%</p>
+            </div>
+
+            <div class="bar-progress">
+              <div class="bar-progress-status"></div>
+            </div>
+          </div>
+
+          <div class="skill-progress">
+            <div class="skill-title">
+              <p>JavaScript</p>
+              <p>50%</p>
+            </div>
+
+            <div class="bar-progress">
+              <div class="bar-progress-status"></div>
+            </div>
+          </div>
+
+          <div class="skill-progress">
+            <div class="skill-title">
+              <p>Python</p>
+              <p>50%</p>
+            </div>
+
+            <div class="bar-progress">
+              <div class="bar-progress-status"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="language-skills">
+          <h2>Language Skills</h2>
+        </div>
+      </section>
+
+      <section class="contact-container">
+        <h2>Contact</h2>
+
+        <form class="contact-form">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
+<!-- 
+https://tokyo-react.vercel.app/#home
+-->
