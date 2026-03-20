@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet" />
+    <title>Portfólio Dark | Tairone</title>
+    <style>
+      /* CONFIGURAÇÕES GERAIS - TEMA ESCURO */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      body {
+        background-color: #0f1113; /* Fundo principal escuro */
+        color: #e0e0e0; /* Texto claro */
+        line-height: 1.6;
+      }
+
+      /* NAV FIXA ESCURA */
+      .topnav {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        position: sticky;
+        top: 0;
+        background: rgba(15, 17, 19, 0.95);
+        z-index: 1000;
+        border-bottom: 1px solid #252a2e;
+        backdrop-filter: blur(10px);
+      }
+
+      .topnav a {
+        text-decoration: none;
+        color: #fff;
+        padding: 20px 0;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: 0.3s;
+      }
+
+      .topnav a:hover {
+        color: #00cfec; /* Cor de destaque (Ciano) */
+      }
+
+      /* SECTION */
+      section {
+        padding: 80px 10%;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #fff;
+      }
+
+      /* HOME - TEMA ESCURO */
+      .home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 95vh;
+        background: radial-gradient(circle at center, #1a1d21 0%, #0f1113 100%);
+        text-align: center;
+      }
+
+      .minhafoto {
+        height: 220px;
+        width: 220px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center top;
+        border: 4px solid #00cfec; /* Borda com a cor de destaque */
+        box-shadow: 0px 0px 30px rgba(0, 207, 236, 0.2);
+      }
+
+      .home h1 {
+        margin-top: 25px;
+        font-size: 3.5rem;
+        color: #fff;
+      }
+
+      .home p {
+        margin-top: 10px;
+        color: #a0a0a0;
+        font-size: 1.2rem;
+        max-width: 600px;
+      }
+
+      /* SOBRE */
+      .about {
+        background: #161a1d;
+      }
+
+      .about-job-title {
+        font-weight: bold;
+        color: #00cfec;
+        margin-bottom: 15px;
+      }
+
+      .about hr {
+        border: none;
+        height: 1px;
+        background: #252a2e;
+        margin: 30px 0;
+      }
+
+      .about-list dt {
+        font-weight: bold;
+        color: #fff;
+      }
+
+      .about-list dd {
+        color: #a0a0a0;
+      }
+
+      /* PROJETOS - CARDS ESCUROS */
+      .projects {
+        background: #0f1113;
+      }
+
+      .project-card {
+        background: #161a1d;
+        border: 1px solid #252a2e;
+        padding: 30px;
+        transition: 0.3s;
+        border-radius: 8px;
+      }
+
+      .project-card:hover {
+        border-color: #00cfec;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      }
+
+      .project-card h3 { color: #fff; margin-bottom: 10px; }
+      .project-card p { color: #a0a0a0; }
+      .project-card a { color: #00cfec; text-decoration: none; font-weight: bold; }
+
+      /* SKILLS */
+      .skills-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        background: #161a1d;
+      }
+
+      .bar-progress {
+        height: 6px;
+        background: #252a2e;
+        border-radius: 10px;
+      }
+
+      .bar-progress-status {
+        background: #00cfec; /* Barras em Ciano */
+        box-shadow: 0 0 10px rgba(0, 207, 236, 0.5);
+      }
+
+      /* CONTATO - FORMULÁRIO ESCURO */
+      .contact-form input,
+      .contact-form textarea {
+        background: #1c2126;
+        border: 1px solid #252a2e;
+        color: #fff;
+        padding: 15px;
+        margin-top: 5px;
+      }
+
+      .contact-form input:focus,
+      .contact-form textarea:focus {
+        border-color: #00cfec;
+        outline: none;
+      }
+
+      .contact-form button {
+        background: #00cfec;
+        color: #0f1113;
+        font-weight: 800;
+        border: none;
+        padding: 15px 40px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .contact-form button:hover {
+        background: #00a8c1;
+        transform: scale(1.02);
+      }
+
+      footer {
+        background: #0f1113;
+        text-align: center; 
+        padding: 40px; 
+        color: #555;
+        border-top: 1px solid #252a2e;
+      }
+
+      @media (max-width: 768px) {
+        .skills-container { grid-template-columns: 1fr; }
+        section { padding: 60px 5%; }
+        .home h1 { font-size: 2.5rem; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="topnav">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </header>
+
+    <section id="inicio" class="home">
+      <img src="./img/profile-img.png" alt="Foto de Tairone" class="minhafoto" />
+      <h1>Tairone</h1>
+      <p>Engenheiro de Software focado em transformar ideias complexas em soluções digitais elegantes.</p>
+    </section>
+
+    <section id="sobre" class="about">
+      <h2>Sobre mim</h2>
+      <p class="about-job-title">Software Engineer in Training</p>
+      <hr />
+      <p>
+        Meu nome é Tairone. Tenho dedicado meu tempo ao estudo de desenvolvimento, arquitetura de sistemas e boas práticas de programação. Busco criar sistemas robustos que unam performance e código limpo.
+      </p>
+      <hr />
+      <dl class="about-list">
+        <dt>Idade:</dt> <dd>32 anos</dd>
+        <dt>Email:</dt> <dd>tairone.escobar@gmail.com</dd>
+        <dt>Foco:</dt> <dd>Backend & Automações</dd>
+      </dl>
+    </section>
+
+    <section id="habilidades" class="skills-container">
+      <div>
+        <h2>Habilidades</h2>
+        <div class="skill-progress">
+          <div class="skill-title"><span>HTML & CSS</span><span>80%</span></div>
+          <div class="bar-progress"><div class="bar-progress-status" style="width: 80%"></div></div>
+        </div>
+        <div class="skill-progress">
+          <div class="skill-title"><span>JavaScript</span><span>65%</span></div>
+          <div class="bar-progress"><div class="bar-progress-status" style="width: 65%"></div></div>
+        </div>
+        <div class="skill-progress">
+          <div class="skill-title"><span>Python</span><span>50%</span></div>
+          <div class="bar-progress"><div class="bar-progress-status" style="width: 50%"></div></div>
+        </div>
+      </div>
+      <div>
+        <h2>Idiomas</h2>
+        <p><strong style="color: #00cfec;">Português:</strong> Nativo</p>
+        <p><strong style="color: #00cfec;">Inglês:</strong> Técnico</p>
+      </div>
+    </section>
+
+    <section id="projetos" class="projects">
+      <h2>Projetos Selecionados</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Sistema de Automação</h3>
+          <p>Scripts Python para otimização de processos e integrações via API.</p>
+          <br>
+          <a href="#">Github Repo →</a>
+        </div>
+        <div class="project-card">
+          <h3>Interface E-commerce</h3>
+          <p>Front-end moderno e responsivo focado em experiência do usuário.</p>
+          <br>
+          <a href="#">Github Repo →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contact-container">
+      <h2 style="text-align: center">Vamos Conversar?</h2>
+      <form class="contact-form">
+        <label>Nome</label>
+        <input type="text" placeholder="Seu nome" required />
+        <label>Email</label>
+        <input type="email" placeholder="seu@email.com" required />
+        <label>Mensagem</label>
+        <textarea rows="5" placeholder="Como posso ajudar no seu projeto?" required></textarea>
+        <button type="submit">ENVIAR AGORA</button>
+      </form>
+    </section>
+
+    <footer>© 2026 Tairone Escobar • Engenheiro de Software</footer>
+  </body>
+</html>

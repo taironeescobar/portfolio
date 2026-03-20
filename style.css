@@ -1,0 +1,155 @@
+:root {
+  /*TEMA CLARO */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7f7f7;
+  --text-primary: #333333;
+  --text-secondary: #808080;
+  --accent-color: #000000;
+  --accent-contrast: #ffffff;
+  --border-color: #eeeeee;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+/* Configurações Globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+section {
+  padding: 80px 10%;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+hr {
+  border: none;
+  background-color: var(--border-color);
+  height: 1px;
+  margin: 30px 0;
+}
+
+/*  Configurações Menu */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text-primary);
+  padding: 20px 0px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+
+.nav a:hover {
+  /* color: var(--text-secondary); */
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* Configurações INICIO */
+.inicio {
+  background-color: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+  padding: 80px 10%;
+}
+
+.minhafoto {
+  display: block;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.inicio p {
+  max-width: 600px;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/*  Configurações SOBRE */
+.formacao {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sobre-lista {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 15px;
+}
+
+.sobre-lista dt {
+  font-weight: bold;
+}
+
+/*  Configurações HABILIDADES */
+
+.habilidades {
+  background-color: var(--bg-secondary);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.progresso .titulo {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+}
+
+.barra-progresso {
+  height: 6px;
+  width: 100%;
+  background: #e1e1e1;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.barrra-progresso-status {
+  height: 100%;
+  background: black;
+  transition: width 1s ease-in-out;
+}
