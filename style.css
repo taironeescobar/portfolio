@@ -71,10 +71,39 @@ hr {
   transition: 0.3s ease-in-out;
 }
 
-.nav a:hover {
-  /* color: var(--text-secondary); */
-  color: var(--accent-color);
-  font-weight: 600;
+.nav a::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 0px;
+  background-color: var(--text-secondary);
+  transition: 0.3s ease-in-out;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    gap: 30px;
+  }
+
+  .nav a {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav {
+    gap: 20px;
+  }
+
+  .nav a {
+  letter-spacing: normal;
+  }
+
+
 }
 
 /* Configurações INICIO */
